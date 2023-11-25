@@ -1,0 +1,181 @@
+=================================
+1. call to OpenAI API : Kürbissuppe
+=================================
+Process Time : 4527 ms
+
+GPT-Model: gpt-4-1106-vision-preview
+Detail Resolution: low
+
+Total amount of tokens used: 240
+Prompt Tokens: 113
+Completion Tokens: 127
+
+Price Estimation (cent): 0.494 
+ 
+
+Prompt: What food do you recognize in the picture? And how many calories does the portion in the picture have?
+Response: The picture shows a bowl of what appears to be creamy pumpkin or butternut squash soup. It's garnished with some herbs and possibly pumpkin seeds.
+
+Estimating calories in food just by a picture can be quite challenging since it depends on the size of the serving and the specific ingredients used. However, a typical serving of homemade pumpkin or butternut squash soup without heavy cream might contain anywhere from 100 to 200 calories. If the soup is made with cream or additional ingredients such as oil or cheese, the calorie count could be higher. To get an accurate calorie count, you would need the specific recipe and serving size.
+
+
+=================================
+2. call to OpenAI API : Salat Bowl
+=================================
+Process Time : 9494 ms
+
+GPT-Model: gpt-4-1106-vision-preview
+Detail Resolution: low
+
+Total amount of tokens used: 413
+Prompt Tokens: 113
+Completion Tokens: 300
+
+Price Estimation (cent): 1.013 
+ 
+
+Prompt: What food do you recognize in the picture? And how many calories does the portion in the picture have?
+Response: The picture shows a salad with various ingredients. I can identify:
+
+- Lettuce or mixed salad greens
+- Tomatoes, possibly cherry or grape tomatoes cut in halves
+- Cucumber slices
+- Cheese, which looks like it might be feta cheese or a similar white, crumbly cheese
+- Red bell pepper slices
+- Spring onions or scallions
+- Seeds, which appear to be pumpkin seeds
+
+There is also a side of dressing, which could be a kind of green herb dressing.
+
+Calculating the exact calorie content of the salad in the picture would require precise measurements of each ingredient. However, I can give you a rough estimate:
+
+- Lettuce or mixed greens: negligible calories, let's say 20 calories for a large bowl.
+- Tomatoes: about 30 calories for a cup of cherry tomatoes.
+- Cucumber: less than 10 calories for a half-cup of sliced cucumber.
+- Cheese: Feta cheese has about 75 calories per ounce, and there seems to be around 2 ounces in the salad.
+- Red bell peppers: less than 20 calories for a half-cup.
+- Spring onions: negligible, perhaps 5 10 calories.
+- Seeds: Pumpkin seeds have about 70 calories per tablespoon, and there looks to be about a tablespoon.
+
+The sauce or dressing, depending on ingredients and quantity, could vary greatly in calorie content, but let's estimate around 50-100 calories if it's an oil
+
+
+=================================
+3. call to OpenAI API : Sandwich Tomate Mozarella
+=================================
+Process Time : 7083 ms
+
+GPT-Model: gpt-4-1106-vision-preview
+Detail Resolution: low
+
+Total amount of tokens used: 343
+Prompt Tokens: 113
+Completion Tokens: 230
+
+Price Estimation (cent): 0.803 
+ 
+
+Prompt: What food do you recognize in the picture? And how many calories does the portion in the picture have?
+Response: The picture shows a sandwich that appears to include whole grain bread, tomatoes, basil leaves, and what looks like a slice of cheese or perhaps a spreadable cheese or mayonnaise-type condiment.
+
+Calculating the exact number of calories in the sandwich would be challenging without knowing the specific quantities and types of each ingredient used. However, I can give you a rough estimate:
+
+- Two slices of whole grain bread: 120-160 calories
+- Tomato slices: Approximately 5 calories per slice (depending on size and quantity, let's say there are 4 slices, that would be around 20 calories)
+- Cheese/spread: This highly varies but a slice of cheese might be around 50-100 calories (or more for a creamy spread)
+- Basil: Negligible calories
+
+Based on the visible ingredients, and without precise measurements, the sandwich could have somewhere in the range of 200 to 300 calories, possibly more if there is a significant amount of spread or cheese included. Keep in mind that this estimate is very rough and the actual calorie content can only be accurately determined with specific details on the ingredients and their portions.
+
+
+=================================
+4. call to OpenAI API : Overnight Oats mit Himbeeren
+=================================
+Process Time : 4450 ms
+
+GPT-Model: gpt-4-1106-vision-preview
+Detail Resolution: low
+
+Total amount of tokens used: 273
+Prompt Tokens: 113
+Completion Tokens: 160
+
+Price Estimation (cent): 0.593 
+ 
+
+Prompt: What food do you recognize in the picture? And how many calories does the portion in the picture have?
+Response: The picture shows a bowl of oatmeal topped with a generous amount of frozen raspberries. It's a common healthy meal that combines the complex carbohydrates and fiber from oatmeal with the antioxidants and vitamins from the berries. The calorie count for this portion would depend on the specific amounts and ingredients used. A typical serving of oatmeal can range from 150 to 300 calories, depending on whether it's made with water or milk and how much is used, and a cup of raspberries adds approximately 65 calories. However, without precise measurements, it's difficult to provide an exact calorie count for this specific portion. If this bowl is a standard single serving of oatmeal with a cup of raspberries, the total calorie content could be estimated to be in the range of 250-400 calories.
+
+
+=================================
+5. call to OpenAI API : Kimbap
+=================================
+Process Time : 5388 ms
+
+GPT-Model: gpt-4-1106-vision-preview
+Detail Resolution: low
+
+Total amount of tokens used: 328
+Prompt Tokens: 113
+Completion Tokens: 215
+
+Price Estimation (cent): 0.758 
+ 
+
+Prompt: What food do you recognize in the picture? And how many calories does the portion in the picture have?
+Response: The image shows a selection of sushi rolls along with a cup of coffee. Sushi rolls typically contain ingredients such as rice, vegetables, and often fish or other types of seafood, but it looks like these might have some alternative fillings, possibly including items like processed meats or other variations.
+
+The calorie content of this portion of sushi can vary greatly depending on the exact size and ingredients used. Generally, a single piece of sushi can range from about 40 to 100 calories. Given there are eight pieces shown, the total calorie count for these sushi rolls could range from around 320 to 800 calories approximately, depending on the specific ingredients and their proportions.
+
+As for the coffee, without knowing if it has added sugar or milk, it's difficult to give an accurate calorie count. Black coffee typically contains only 2 calories per ounce (about 30 milliliters), so a typical cup might have fewer than 10 calories if it's black.
+
+Please note these are rough estimates; for accurate nutritional information, one would need specific details about the ingredients and portion sizes.
+
+
+=================================
+6. call to OpenAI API : Gefüllte Zuccini
+=================================
+Process Time : 5029 ms
+
+GPT-Model: gpt-4-1106-vision-preview
+Detail Resolution: low
+
+Total amount of tokens used: 304
+Prompt Tokens: 113
+Completion Tokens: 191
+
+Price Estimation (cent): 0.686 
+ 
+
+Prompt: What food do you recognize in the picture? And how many calories does the portion in the picture have?
+Response: The picture shows a dish that appears to be stuffed zucchini, also known as zucchini boats. The zucchini has been sliced in half, hollowed out, and filled with a mixture that could include ingredients like cheese, possibly some kind of meat or a meat substitute, and perhaps garlic or spices. There are also some kind of nuts or seeds sprinkled on top, which seem to be pine nuts.
+
+Calculating the exact number of calories in the portion in the picture is a bit tricky without knowing the specific ingredients or quantities used. However, a single medium-sized zucchini has about 33 calories. The filling and toppings will add more, depending on what they are. Cheese and nuts are calorie-dense, for example. A rough estimate for both halves could range from 200 to 600 calories, or more if richer ingredients are used in significant amounts. For a closer estimate, you would need a recipe with specific ingredients and their amounts.
+
+
+=================================
+7. call to OpenAI API : Bayrische Küche
+=================================
+Process Time : 7877 ms
+
+GPT-Model: gpt-4-1106-vision-preview
+Detail Resolution: low
+
+Total amount of tokens used: 369
+Prompt Tokens: 113
+Completion Tokens: 256
+
+Price Estimation (cent): 0.881 
+ 
+
+Prompt: What food do you recognize in the picture? And how many calories does the portion in the picture have?
+Response: The picture shows a traditional German meal that appears to include a roasted pork knuckle (Schweinshaxe) served with gravy, a side of red cabbage (Rotkohl), and a dumpling, which is probably a potato dumpling (Kartoffelkn del). There is also a glass of beer.
+
+Estimating the calorie content of the meal from a picture can be challenging as it heavily depends on the serving sizes and preparation methods. However, I can provide you with a rough estimate:
+
+- A roasted pork knuckle can have anywhere between 500 to over 1000 calories depending on its size and how it's cooked.
+- A serving of red cabbage could be roughly around 150-200 calories, assuming it's not additionally sweetened or heavily laden with fat.
+- A potato dumpling might have about 150-250 calories, depending on its size.
+- A typical glass of beer (approximately 500ml if it's a German pint) could be in the range of 180-250 calories depending on the type of beer.
+
+Adding these up, the meal in your picture could have approximately 980 to 1700 calories or more, but please take this as a very rough estimate. The actual caloric content could vary significantly.

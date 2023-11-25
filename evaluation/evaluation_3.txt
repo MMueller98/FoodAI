@@ -1,0 +1,162 @@
+=================================
+1. call to OpenAI API : Kürbissuppe
+=================================
+Process Time : 5216 ms
+
+GPT-Model: gpt-4-1106-vision-preview
+Detail Resolution: low
+
+Total amount of tokens used: 238
+Prompt Tokens: 117
+Completion Tokens: 121
+
+Price Estimation (cent): 0.480 
+
+Prompt: What food do you recognize in the picture? What do you estimate the calorie count is per 100 grams for the food?
+Response: The picture shows a bowl of creamy pumpkin soup garnished with what appears to be pumpkin seeds and herbs, possibly parsley or cilantro. The calorie count for pumpkin soup can vary widely depending on the ingredients used and the method of preparation, but a general estimate for a typical cream-based pumpkin soup might be in the range of 100 to 150 calories per 100 grams. Keep in mind that if the soup uses heavy cream or additional ingredients such as bacon, the calorie count could be higher. If it's prepared with a vegetable broth and fewer high-calorie ingredients, the calorie count could be lower.
+
+
+=================================
+2. call to OpenAI API : Salat Bowl
+=================================
+Process Time : 8262 ms
+
+GPT-Model: gpt-4-1106-vision-preview
+Detail Resolution: low
+
+Total amount of tokens used: 417
+Prompt Tokens: 117
+Completion Tokens: 300
+
+Price Estimation (cent): 1.017 
+
+Prompt: What food do you recognize in the picture? What do you estimate the calorie count is per 100 grams for the food?
+Response: The picture shows a salad that contains various vegetables and possibly some cheese and nuts. I can identify ingredients such as tomatoes, cucumbers, lettuce or leafy greens, spring onions, and seeds (which appear to be pumpkin seeds). There also seems to be some cheese (the cubed pieces) and what could be crumbled feta or a similar type of cheese. There's a green dressing on the side, which might be a herb-based dressing, possibly with ingredients like basil, garlic, oil, etc.
+
+The calories per 100 grams of this salad would vary widely depending on the specific ingredients and their proportions, particularly the type of cheese and the components of the dressing. Here's a rough estimate:
+
+- Vegetables are relatively low in calories, typically ranging from 15 to 30 calories per 100 grams.
+- Feta cheese or a similar cheese is higher in calories, typically around 264 calories per 100 grams.
+- Nuts and seeds are calorie-dense, with pumpkin seeds at about 446 calories per 100 grams.
+
+An overall estimate might be difficult without knowing the amounts of each ingredient, but a mixed salad of this kind, assuming it is vegetable-heavy with moderate amounts of cheese and seeds, might fall in the range of 100-200 calories per 100 grams, considering it all mixes to a lower calorie density. Keep in mind that the dressing will also add to the calorie count, and its caloric content can vary significantly based on its ingredients and
+
+
+=================================
+3. call to OpenAI API : Sandwich Tomate Mozarella
+=================================
+Process Time : 6878 ms
+
+GPT-Model: gpt-4-1106-vision-preview
+Detail Resolution: low
+
+Total amount of tokens used: 384
+Prompt Tokens: 117
+Completion Tokens: 267
+
+Price Estimation (cent): 0.918 
+
+Prompt: What food do you recognize in the picture? What do you estimate the calorie count is per 100 grams for the food?
+Response: The image shows a sandwich made with what appears to be whole grain bread, filled with slices of tomato, some leafy greens that look like basil, and a white spread that could possibly be mayonnaise or a cheese spread. 
+
+Estimating the calorie count for this sandwich per 100 grams would vary widely based on the specific ingredients and their quantities. However, I can give you a rough estimate based on the individual components:
+
+1. Whole-grain bread: Around 250 calories per 100 grams.
+2. Tomatoes: Approximately 18 calories per 100 grams.
+3. Leafy greens like basil: Roughly 20-25 calories per 100 grams.
+4. Mayonnaise or cheese spread: Mayonnaise could have about 680 calories per 100 grams, while a soft cheese spread might be around 200-300 calories per 100 grams.
+
+Considering the mixture of these ingredients, a more calorie-dense ingredient like mayo or cheese would significantly raise the calorie count. If the sandwich consists of mainly the bread with a reasonable amount of vegetables and spread, the overall calorie count of the sandwich per 100 grams might be estimated roughly in the range of 200-300 calories, but please note that this is a very rough estimate and would need precise measurement and calculation to determine an accurate calorie count.
+
+
+=================================
+4. call to OpenAI API : Overnight Oats mit Himbeeren
+=================================
+Process Time : 4439 ms
+
+GPT-Model: gpt-4-1106-vision-preview
+Detail Resolution: low
+
+Total amount of tokens used: 277
+Prompt Tokens: 117
+Completion Tokens: 160
+
+Price Estimation (cent): 0.597 
+
+Prompt: What food do you recognize in the picture? What do you estimate the calorie count is per 100 grams for the food?
+Response: The image shows a bowl of what appears to be oatmeal or porridge topped with frozen raspberries. While I can't provide a precise calorie count without knowing the exact ingredients and their quantities, I can give you a general idea based on common values for these foods:
+
+- Oatmeal: On average, cooked oatmeal has about 71 calories per 100 grams.
+- Raspberries: Fresh raspberries contain about 52 calories per 100 grams; however, the calorie content would remain the same for frozen ones as long as they're unsweetened.
+
+Please note that if the oatmeal contains added ingredients like milk, sugar, honey, or nuts, the calorie content could be significantly higher. Similarly, any toppings other than the visible raspberries could also change the caloric estimate.
+
+
+=================================
+5. call to OpenAI API : Kimbap
+=================================
+Process Time : 7968 ms
+
+GPT-Model: gpt-4-1106-vision-preview
+Detail Resolution: low
+
+Total amount of tokens used: 284
+Prompt Tokens: 117
+Completion Tokens: 167
+
+Price Estimation (cent): 0.618 
+
+Prompt: What food do you recognize in the picture? What do you estimate the calorie count is per 100 grams for the food?
+Response: The picture shows a plate of sushi rolls, specifically a type called Kimbap or Gimbap which is a Korean variation, often filled with ingredients like vegetables, egg, and some type of meat or fish. The dark round object towards the top left is likely a cup of sauce, possibly soy sauce or a similar dipping sauce.
+
+Regarding the calorie count, it can vary quite a bit depending on the specific fillings used. However, a general estimate for kimbap may be around 250 to 350 calories per 100 grams, considering the rice and varied fillings which typically include seasoned vegetables, egg, and sometimes processed meats, which are higher in calories.
+
+Please bear in mind that this estimate is quite rough; the actual calorie count can only be accurately determined with the exact ingredients and their proportions in those specific rolls.
+
+
+=================================
+6. call to OpenAI API : Gefüllte Zuccini
+=================================
+Process Time : 4541 ms
+
+GPT-Model: gpt-4-1106-vision-preview
+Detail Resolution: low
+
+Total amount of tokens used: 293
+Prompt Tokens: 117
+Completion Tokens: 176
+
+Price Estimation (cent): 0.645 
+
+Prompt: What food do you recognize in the picture? What do you estimate the calorie count is per 100 grams for the food?
+Response: The image shows a dish that looks like stuffed zucchini halves, also known as zucchini boats. They appear to be filled with a creamy cheese mixture, possibly ricotta or cream cheese, and topped with what appears to be nuts, possibly pine nuts or chopped almonds.
+
+It's difficult to provide an accurate calorie count without knowing the exact ingredients and their quantities, but on average, a zucchini has about 17 calories per 100 grams. However, the stuffing and toppings can add significantly more calories due to the higher fat content in cheese and nuts. If we were to estimate loosely, including the cheese and nuts, the calorie count for the stuffed portion could be somewhere in the range of 150-250 calories per 100 grams, depending on the specific ingredients used and their proportions. This is a rough estimate, and the actual calorie count could be outside of this range.
+
+
+=================================
+7. call to OpenAI API : Bayrische Küche
+=================================
+Process Time : 10879 ms
+
+GPT-Model: gpt-4-1106-vision-preview
+Detail Resolution: low
+
+Total amount of tokens used: 393
+Prompt Tokens: 117
+Completion Tokens: 276
+
+Price Estimation (cent): 0.945 
+
+Prompt: What food do you recognize in the picture? What do you estimate the calorie count is per 100 grams for the food?
+Response: The picture shows a meal with what looks like a roasted chicken, dumplings, gravy, and a side of red cabbage, which may be braised or pickled. There is also a glass of beer.
+
+Estimating the calorie count per 100 grams for each food item:
+
+1. **Roasted chicken**: This would vary based on the cut and whether it includes skin, but on average, roasted chicken could contain approximately 200-250 calories per 100 grams.
+2. **Dumplings**: Depending on the ingredients, they could range from 150 to 250 calories per 100 grams.
+3. **Gravy**: Gravy can vary widely in calorie content based on its thickness and ingredients; it could be around 100-150 calories per 100 grams, but this is a rough guess.
+4. **Red cabbage**: If it's pickled or braised without much added sugar, it might be around 25-50 calories per 100 grams.
+5. **Beer**: The caloric content of beer depends on its type and brand. On average, a regular beer might contain about 40-60 calories per 100 milliliters.
+
+These estimates are quite rough and would depend on the precise preparation and ingredients used. For accurate calorie information, you would need to refer to a nutritional database or the specific recipes used to prepare the meal.

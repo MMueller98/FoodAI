@@ -1,0 +1,71 @@
+=================================
+1. call to OpenAI API : Kürbissuppe
+=================================
+Process Time : 3693 ms
+
+GPT-Model: gpt-4-1106-vision-preview
+Detail Resolution: low
+
+Total amount of tokens used: 203
+Prompt Tokens: 107
+Completion Tokens: 96
+
+Price Estimation: 0.395 Cent
+
+Prompt: What type of food is in this image? And how much of it?
+Response: The image shows a bowl of what appears to be a creamy soup, likely a pumpkin or butternut squash soup given its orange color. The soup is garnished with what looks like a drizzle of cream or yogurt, some herbs, and a few seeds, possibly pumpkin seeds, which are often used to garnish and add texture to such soups. As for the amount, it's a single serving in a standard-sized soup bowl, filled almost to the brim.
+
+
+=================================
+2. call to OpenAI API : Salat Bowl
+=================================
+Process Time : 8192 ms
+
+GPT-Model: gpt-4-1106-vision-preview
+Detail Resolution: low
+
+Total amount of tokens used: 310
+Prompt Tokens: 107
+Completion Tokens: 203
+
+Price Estimation: 0.716 Cent
+
+Prompt: What type of food is in this image? And how much of it?
+Response: The image shows a bowl of salad. The salad appears to contain various chopped vegetables such as cucumbers, tomatoes, possibly red peppers, and mixed greens like lettuce or arugula. There are also some ingredients that look like crumbled cheese or grain, perhaps feta or quinoa, as well as what looks like green onions or chives sprinkled on top. Adjacent to the salad bowl is a smaller dish with a green sauce that might be a dressing, possibly an herb-based one like a pesto or a green vinaigrette. Throughout the salad, there are also some seeds sprinkled around, which might be pumpkin seeds or sunflower seeds.
+As for the quantity, it's a single bowl that seems suitable for several servings, perhaps enough for 2-4 people as part of a meal depending on portion sizes. The exact quantity is hard to determine without more context but judging by the size of the bowl and usual portion sizes, it looks to be a generous amount of salad.
+
+
+=================================
+3. call to OpenAI API : Sandwich
+=================================
+Process Time : 5091 ms
+
+GPT-Model: gpt-4-1106-vision-preview
+Detail Resolution: low
+
+Total amount of tokens used: 192
+Prompt Tokens: 107
+Completion Tokens: 85
+
+Price Estimation: 0.362 Cent
+
+Prompt: What type of food is in this image? And how much of it?
+Response: The image shows a sandwich that appears to consist of whole grain or wholemeal bread. It's filled with slices of tomato, mozzarella, and fresh basil leaves, which are ingredients typically used in a Caprese salad. The sandwich is being held by a hand, indicating its size relative to an average hand. It seems like there is one sandwich, cut in half, and one of the halves is being lifted or held.
+
+
+=================================
+4. call to OpenAI API : Bayrische Küche
+=================================
+Process Time : 4203 ms
+
+GPT-Model: gpt-4-1106-vision-preview
+Detail Resolution: low
+
+Total amount of tokens used: 223
+Prompt Tokens: 107
+Completion Tokens: 116
+
+Price Estimation: 0.455 Cent
+
+Prompt: What type of food is in this image? And how much of it?
+Response: The image shows a plate with what appears to be traditional German cuisine. I see a crispy roasted pork knuckle (Schweinshaxe) served with a side of potato dumpling (Kartoffelknödel) and garnished with a sprinkle of herbs, likely parsley. On the side, there is a bowl of red cabbage (Rotkohl or Blaukraut), which is a common accompaniment in German meals. Additionally, there's a glass of beer to complement the meal. It looks like a portion that would typically serve one person.

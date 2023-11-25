@@ -1,0 +1,41 @@
+=================================
+1. call to OpenAI API : Kürbissuppe
+=================================
+Model: gpt-4-1106-vision-preview
+Process Time (ms): 3782
+Total amount of tokens used: 201
+Response: The image shows a bowl of soup, likely a creamy variety such as butternut squash or pumpkin soup given its orange color. The soup is garnished with what appears to be a drizzle of cream, some herbs, and possibly pumpkin seeds. There's a single portion in the bowl, which is typical for an individual serving. The quantity is difficult to quantify in volume without a reference, but it fills the bowl to an appropriate level for a serving of soup.
+OpenAiResponse(id=chatcmpl-8OlxlT6ab2pmpZ5QwwaydvqtPGSoP, object=chat.completion, created=1700914933, model=gpt-4-1106-vision-preview, usage=Usage(promptTokens=107, completionTokens=154, totalTokens=261), choices=[Choice(responseMessage=ResponseMessage(role=assistant, content=The image shows a colorful and fresh salad. It seems to contain a mix of diced apples, red cherry tomatoes, sliced cucumbers, green onions, and possibly some crumbled cheese or tofu. There are also some leafy greens that might be arugula or another type of salad green. On the side, there's a small bowl with a green sauce, likely a dressing that could be made of herbs, garlic, olive oil, or avocado.
+
+It's served in a large white bowl and appears to be enough to serve multiple people, likely 2-4 servings, depending on whether it's enjoyed as a main dish or a side salad. There are also some sunflower seeds scattered around the bowl, which are often used as a crunchy salad topping.), finishDetails=FinishDetails(type=stop, stop=<|fim_suffix|>), index=0)])
+
+
+=================================
+2. call to OpenAI API : Quinoa Salat
+=================================
+Model: gpt-4-1106-vision-preview
+Process Time (ms): 4905
+Total amount of tokens used: 261
+Response: The image shows a colorful and fresh salad. It seems to contain a mix of diced apples, red cherry tomatoes, sliced cucumbers, green onions, and possibly some crumbled cheese or tofu. There are also some leafy greens that might be arugula or another type of salad green. On the side, there's a small bowl with a green sauce, likely a dressing that could be made of herbs, garlic, olive oil, or avocado.
+
+It's served in a large white bowl and appears to be enough to serve multiple people, likely 2-4 servings, depending on whether it's enjoyed as a main dish or a side salad. There are also some sunflower seeds scattered around the bowl, which are often used as a crunchy salad topping.
+OpenAiResponse(id=chatcmpl-8Olxq0GBdsPx3aPFIwGi1KSve3DOx, object=chat.completion, created=1700914938, model=gpt-4-1106-vision-preview, usage=Usage(promptTokens=107, completionTokens=72, totalTokens=179), choices=[Choice(responseMessage=ResponseMessage(role=assistant, content=The image shows a sandwich that appears to be made with whole grain bread. The visible fillings include slices of tomato, what looks like mozzarella cheese, and a leaf of basil, suggesting a Caprese-style sandwich. There seems to be one sandwich in the image, which is being held by a person's hand, indicating it's ready to be eaten.), finishDetails=FinishDetails(type=stop, stop=<|fim_suffix|>), index=0)])
+
+
+=================================
+3. call to OpenAI API : Sandwich
+=================================
+Model: gpt-4-1106-vision-preview
+Process Time (ms): 4216
+Total amount of tokens used: 179
+Response: The image shows a sandwich that appears to be made with whole grain bread. The visible fillings include slices of tomato, what looks like mozzarella cheese, and a leaf of basil, suggesting a Caprese-style sandwich. There seems to be one sandwich in the image, which is being held by a person's hand, indicating it's ready to be eaten.
+OpenAiResponse(id=chatcmpl-8OlxuHjhTbsfBDarbHQ0vrXSZ0rvY, object=chat.completion, created=1700914942, model=gpt-4-1106-vision-preview, usage=Usage(promptTokens=107, completionTokens=114, totalTokens=221), choices=[Choice(responseMessage=ResponseMessage(role=assistant, content=The image shows what appears to be a traditional German meal. On the plate, there's a pork knuckle, which is often referred to as Schweinshaxe, alongside what looks like a serving of potato dumpling, commonly known as Kartoffelkn del. Accompanying the dish is a side of red cabbage, often called Rotkohl or Blaukraut in German cuisine. There's also a glass of beer next to the plate. There seems to be one portion of each food item on the table, suitable for a single serving.), finishDetails=FinishDetails(type=stop, stop=<|fim_suffix|>), index=0)])
+
+
+=================================
+4. call to OpenAI API : Bayrische Küche
+=================================
+Model: gpt-4-1106-vision-preview
+Process Time (ms): 3819
+Total amount of tokens used: 221
+Response: The image shows what appears to be a traditional German meal. On the plate, there's a pork knuckle, which is often referred to as Schweinshaxe, alongside what looks like a serving of potato dumpling, commonly known as Kartoffelkn del. Accompanying the dish is a side of red cabbage, often called Rotkohl or Blaukraut in German cuisine. There's also a glass of beer next to the plate. There seems to be one portion of each food item on the table, suitable for a single serving.

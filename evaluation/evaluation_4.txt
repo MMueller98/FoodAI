@@ -1,0 +1,125 @@
+====================================
+1. call to OpenAI API : Kürbissuppe
+====================================
+Process Time : 2335 ms
+
+GPT-Model: gpt-4-1106-vision-preview
+Detail Resolution: low
+
+Total amount of tokens used: 155
+Prompt Tokens: 140
+Completion Tokens: 15
+
+Price Estimation (cent): 0.185 
+
+Prompt: What food do you recognize in the picture? What do you estimate the calorie count is per 100 grams for the food? Reply in as few words as possible and give an clear estimation, even if you are not 100% confident.
+Response: Pumpkin soup, approximately 50-80 kcal/100g.
+
+
+===================================
+2. call to OpenAI API : Salat Bowl
+===================================
+Process Time : 1940 ms
+
+GPT-Model: gpt-4-1106-vision-preview
+Detail Resolution: low
+
+Total amount of tokens used: 154
+Prompt Tokens: 140
+Completion Tokens: 14
+
+Price Estimation (cent): 0.182 
+
+Prompt: What food do you recognize in the picture? What do you estimate the calorie count is per 100 grams for the food? Reply in as few words as possible and give an clear estimation, even if you are not 100% confident.
+Response: Mixed salad. Calorie count: ~50 kcal/100g.
+
+
+==================================================
+3. call to OpenAI API : Sandwich Tomate Mozarella
+==================================================
+Process Time : 3158 ms
+
+GPT-Model: gpt-4-1106-vision-preview
+Detail Resolution: low
+
+Total amount of tokens used: 155
+Prompt Tokens: 140
+Completion Tokens: 15
+
+Price Estimation (cent): 0.185 
+
+Prompt: What food do you recognize in the picture? What do you estimate the calorie count is per 100 grams for the food? Reply in as few words as possible and give an clear estimation, even if you are not 100% confident.
+Response: Caprese sandwich. Estimate: 250-300 kcal/100g.
+
+
+====================================================
+4. call to OpenAI API : Overnight Oats mit Himbeeren
+====================================================
+Process Time : 1784 ms
+
+GPT-Model: gpt-4-1106-vision-preview
+Detail Resolution: low
+
+Total amount of tokens used: 158
+Prompt Tokens: 140
+Completion Tokens: 18
+
+Price Estimation (cent): 0.194 
+
+Prompt: What food do you recognize in the picture? What do you estimate the calorie count is per 100 grams for the food? Reply in as few words as possible and give an clear estimation, even if you are not 100% confident.
+Response: Oatmeal with raspberries. Estimate: 110-130 calories/100g.
+
+
+===============================
+5. call to OpenAI API : Kimbap
+===============================
+Process Time : 2173 ms
+
+GPT-Model: gpt-4-1106-vision-preview
+Detail Resolution: low
+
+Total amount of tokens used: 153
+Prompt Tokens: 140
+Completion Tokens: 13
+
+Price Estimation (cent): 0.179 
+
+Prompt: What food do you recognize in the picture? What do you estimate the calorie count is per 100 grams for the food? Reply in as few words as possible and give an clear estimation, even if you are not 100% confident.
+Response: Sushi. Approximately 130-175 calories/100g.
+
+
+=========================================
+6. call to OpenAI API : Gefüllte Zuccini
+=========================================
+Process Time : 1874 ms
+
+GPT-Model: gpt-4-1106-vision-preview
+Detail Resolution: low
+
+Total amount of tokens used: 153
+Prompt Tokens: 140
+Completion Tokens: 13
+
+Price Estimation (cent): 0.179 
+
+Prompt: What food do you recognize in the picture? What do you estimate the calorie count is per 100 grams for the food? Reply in as few words as possible and give an clear estimation, even if you are not 100% confident.
+Response: Stuffed zucchini. Approximately 150 calories/100g.
+
+
+=======================================
+7. call to OpenAI API : Bayrische Küche
+=======================================
+Process Time : 1940 ms
+
+GPT-Model: gpt-4-1106-vision-preview
+Detail Resolution: low
+
+Total amount of tokens used: 158
+Prompt Tokens: 140
+Completion Tokens: 18
+
+Price Estimation (cent): 0.194 
+
+Prompt: What food do you recognize in the picture? What do you estimate the calorie count is per 100 grams for the food? Reply in as few words as possible and give an clear estimation, even if you are not 100% confident.
+Response: Roast chicken, potato dumpling, red cabbage. ~250 kcal/100g.
+
