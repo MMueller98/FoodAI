@@ -1,11 +1,18 @@
-package de.muellermarius;
+package de.muellermarius.service;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
+import de.muellermarius.FoodAiApplication;
 import de.muellermarius.dto.request.*;
 import de.muellermarius.dto.response.Choice;
 import de.muellermarius.dto.response.OpenAiResponse;
 import de.muellermarius.dto.response.ResponseMessage;
 import de.muellermarius.dto.response.Usage;
+import de.muellermarius.model.entities.Meal;
+import de.muellermarius.translation.OpenAiResponseToMealTranslation;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
 import java.io.*;
 import java.net.HttpURLConnection;
@@ -15,11 +22,14 @@ import java.util.Base64;
 import java.util.List;
 import java.util.Optional;
 
-public class Main {
+@Service
+public class FoodClassificationService {
+    private static final Logger LOGGER = LoggerFactory.getLogger(FoodClassificationService.class);
+
     private static final String API_KEY = System.getenv("API_KEY");
     private static final String OPEN_AI_API_URL = "https://api.openai.com/v1/chat/completions";
 
-    private static final String INPUT_PROMPT = "What food do you recognize in the picture? What do you estimate the calorie count is per 100 grams for the food? Reply in as few words as possible and give an clear estimation, even if you are not 100% confident.";
+    private static final String INPUT_PROMPT = "Classify the food in the image and list all ingredients together with their proportion of the total amount of food as integer, so that the sum of all integers is 100. Return ONLY valid JSON int the format {\"food_classifier\":<string>,\"ingredients\":[{\"name\":<String>,\"portion\":<number>}]}";
     private static final String GPT_MODEL = "gpt-4-vision-preview";
     private static final String DETAIL_RESOLUTION = "low";
 
@@ -28,25 +38,27 @@ public class Main {
 
     private static int counter = 0;
 
-    public static void main(String[] args) {
-        startFoodDetectionProcess("kuerbisSuppe.jpg", "Kürbissuppe");
-        startFoodDetectionProcess("quinosalat.jpg", "Salat Bowl");
-        startFoodDetectionProcess("sandwich.jpg", "Sandwich Tomate Mozarella");
-        startFoodDetectionProcess("overnight_oats.jpg", "Overnight Oats mit Himbeeren");
-        startFoodDetectionProcess("kimbap.jpg", "Kimbap");
-        startFoodDetectionProcess("zuccini_gefuellt.jpg", "Gefüllte Zuccini");
-        startFoodDetectionProcess("bayrisch.jpg", "Bayrische Küche");
+    private final OpenAiResponseToMealTranslation openAiResponseToMealTranslation;
+
+    @Autowired
+    public FoodClassificationService(final OpenAiResponseToMealTranslation openAiResponseToMealTranslation) {
+        this.openAiResponseToMealTranslation = openAiResponseToMealTranslation;
     }
 
-    private static void startFoodDetectionProcess(final String imagePath, final String imageName) {
+    public Meal startFoodDetectionProcess(final String imagePath, final String imageName) {
         final long startTime = System.currentTimeMillis();
         final OpenAiResponse openAiResponse = detectFoodViaOpenAiApi(imagePath);
-        final long endTime = System.currentTimeMillis();
+        final long duration = System.currentTimeMillis() - startTime;
 
-        logResult(imageName, openAiResponse, endTime - startTime);
+        logApiResult(imageName, openAiResponse, duration);
+
+        return openAiResponseToMealTranslation
+                .translate(openAiResponse, duration)
+                .map(this::logSuccessfull)
+                .orElse(logFailureWithDefault());
     }
 
-    private static OpenAiResponse detectFoodViaOpenAiApi(final String imagePath) {
+    private OpenAiResponse detectFoodViaOpenAiApi(final String imagePath) {
 
         OpenAiResponse openAiResponse = new OpenAiResponse();
 
@@ -122,10 +134,10 @@ public class Main {
     }
 
     // Function to encode the image
-    private static String encodeImage(String imagePath) {
+    private String encodeImage(String imagePath) {
         try {
             // Pfad zum Bild im resources-Ordner
-            URL imageUrl = Main.class.getClassLoader().getResource(imagePath);
+            URL imageUrl = FoodAiApplication.class.getClassLoader().getResource(imagePath);
             if (imageUrl == null) {
                 throw new FileNotFoundException("Bild nicht gefunden: " + imagePath);
             }
@@ -143,7 +155,22 @@ public class Main {
         }
     }
 
-    private static void logResult(final String imageName, final OpenAiResponse response, final long processTimeMs) {
+    private String getContentOfFirstChoice(final OpenAiResponse response) {
+        return Optional.ofNullable(response.getChoices())
+                .flatMap(choices -> choices.stream().findFirst())
+                .map(Choice::getResponseMessage)
+                .map(ResponseMessage::getContent)
+                .orElse("");
+    }
+
+    private double calculatePriceEstimation(final Usage usage) {
+        final double inputCost = (((double) usage.getPromptTokens()) / 1000) * INPUT_TOKEN_PRICE_PER_1K_IN_CENT;
+        final double outputCost = (((double) usage.getCompletionTokens()) / 1000) * OUTPUT_TOKEN_PRICE_PER_1K_IN_CENT;
+
+        return inputCost + outputCost;
+    }
+
+    private void logApiResult(final String imageName, final OpenAiResponse response, final long processTimeMs) {
         System.out.println("\n\n==============================================");
         System.out.println(++counter + ". call to OpenAI API : " + imageName);
         System.out.println("==============================================");
@@ -158,25 +185,23 @@ public class Main {
         System.out.println("Total amount of tokens used: " + Optional.ofNullable(response.getUsage()).map(Usage::getTotalTokens).orElse(0));
         System.out.println("Prompt Tokens: " + Optional.ofNullable(response.getUsage()).map(Usage::getPromptTokens).orElse(0));
         System.out.println("Completion Tokens: " + Optional.ofNullable(response.getUsage()).map(Usage::getCompletionTokens).orElse(0));
-        System.out.printf("\nPrice Estimation (cent): %.3f %n", Optional.ofNullable(response.getUsage()).map(Main::calculatePriceEstimation).orElse(0.0));
+        System.out.printf("\nPrice Estimation (cent): %.3f %n", Optional.ofNullable(response.getUsage()).map(
+                this::calculatePriceEstimation).orElse(0.0));
         System.out.println();
 
         System.out.println("Prompt: " + INPUT_PROMPT);
         System.out.println("Response: " + getContentOfFirstChoice(response));
     }
 
-    private static String getContentOfFirstChoice(final OpenAiResponse response) {
-        return Optional.ofNullable(response.getChoices())
-                .flatMap(choices -> choices.stream().findFirst())
-                .map(Choice::getResponseMessage)
-                .map(ResponseMessage::getContent)
-                .orElse("");
+    private <T> T logSuccessfull(final T entity) {
+        LOGGER.info("Translation Successfull! Entity created: {}", entity);
+
+        return entity;
     }
 
-    private static double calculatePriceEstimation(final Usage usage) {
-        final double inputCost = (((double) usage.getPromptTokens()) / 1000) * INPUT_TOKEN_PRICE_PER_1K_IN_CENT;
-        final double outputCost = (((double) usage.getCompletionTokens()) / 1000) * OUTPUT_TOKEN_PRICE_PER_1K_IN_CENT;
+    private Meal logFailureWithDefault() {
+        LOGGER.error("Error in Translation: Missing Information!");
 
-        return inputCost + outputCost;
+        return Meal.builder().build();
     }
 }

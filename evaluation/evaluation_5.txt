@@ -1,0 +1,30 @@
+==============================================
+1. call to OpenAI API : Salat Bowl
+==============================================
+Process Time : 11445 ms
+
+GPT-Model: gpt-4-1106-vision-preview
+Detail Resolution: low
+
+Total amount of tokens used: 291
+Prompt Tokens: 156
+Completion Tokens: 135
+
+Price Estimation (cent): 0.561
+
+Prompt: Classify the food in the image and list all ingredients together with their proportion of the total amount of food as integer, so that the sum of all integers is 100. Return ONLY valid JSON int the format {"food_classifier":<string>,"ingredients":[{"name":<String>,"portion":<number>}]}
+Response: ```json
+{
+  "food_classifier": "salad",
+  "ingredients": [
+    {"name": "lettuce", "portion": 30},
+    {"name": "tomatoes", "portion": 20},
+    {"name": "cucumber", "portion": 15},
+    {"name": "cheese", "portion": 10},
+    {"name": "nuts", "portion": 5},
+    {"name": "green onions", "portion": 5},
+    {"name": "pumpkin seeds", "portion": 5},
+    {"name": "dressing", "portion": 10}
+  ]
+}
+```
