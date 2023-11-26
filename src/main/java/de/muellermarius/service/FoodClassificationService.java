@@ -45,11 +45,12 @@ public class FoodClassificationService {
         this.openAiResponseToMealTranslation = openAiResponseToMealTranslation;
     }
 
-    public Meal startFoodDetectionProcess(final String imagePath, final String imageName) {
+    public Meal startFoodDetectionProcess(final String base64Image, final String imageName) {
         final long startTime = System.currentTimeMillis();
-        final OpenAiResponse openAiResponse = detectFoodViaOpenAiApi(imagePath);
+        final OpenAiResponse openAiResponse = detectFoodViaOpenAiApi(base64Image);
         final long duration = System.currentTimeMillis() - startTime;
 
+        // TODO: Result in File schreiben
         logApiResult(imageName, openAiResponse, duration);
 
         return openAiResponseToMealTranslation
@@ -58,12 +59,9 @@ public class FoodClassificationService {
                 .orElse(logFailureWithDefault());
     }
 
-    private OpenAiResponse detectFoodViaOpenAiApi(final String imagePath) {
+    private OpenAiResponse detectFoodViaOpenAiApi(final String base64Image) {
 
         OpenAiResponse openAiResponse = new OpenAiResponse();
-
-        // Getting the base64 string
-        String base64Image = encodeImage(imagePath);
 
         // Constructing the request payload using POJOs
         OpenAiRequest requestPayload = new OpenAiRequest();
@@ -131,28 +129,6 @@ public class FoodClassificationService {
         }
 
         return openAiResponse;
-    }
-
-    // Function to encode the image
-    private String encodeImage(String imagePath) {
-        try {
-            // Pfad zum Bild im resources-Ordner
-            URL imageUrl = FoodAiApplication.class.getClassLoader().getResource(imagePath);
-            if (imageUrl == null) {
-                throw new FileNotFoundException("Bild nicht gefunden: " + imagePath);
-            }
-
-            File file = new File(imageUrl.getFile());
-            byte[] fileContent = new byte[(int) file.length()];
-            FileInputStream fis = new FileInputStream(file);
-            fis.read(fileContent);
-            fis.close();
-
-            return Base64.getEncoder().encodeToString(fileContent);
-        } catch (IOException e) {
-            e.printStackTrace();
-            return null;
-        }
     }
 
     private String getContentOfFirstChoice(final OpenAiResponse response) {

@@ -63,6 +63,7 @@ public class OpenAiResponseToMealTranslation {
     private Optional<MealDto> parseFirstChoiceToMealDto(final String firstChoiceResponseContent) {
         final ObjectMapper objectMapper = new ObjectMapper();
 
+        // TODO: wenn parsen fehlschlägt, weitersuchen
         int startIndex = firstChoiceResponseContent.indexOf("{");
         int endIndex = firstChoiceResponseContent.lastIndexOf("}");
 
