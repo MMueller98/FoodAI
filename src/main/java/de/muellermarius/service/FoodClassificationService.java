@@ -1,7 +1,6 @@
 package de.muellermarius.service;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
-import de.muellermarius.FoodAiApplication;
 import de.muellermarius.dto.request.*;
 import de.muellermarius.dto.response.Choice;
 import de.muellermarius.dto.response.OpenAiResponse;
@@ -18,13 +17,14 @@ import java.io.*;
 import java.net.HttpURLConnection;
 import java.net.URL;
 import java.nio.charset.StandardCharsets;
-import java.util.Base64;
+import java.time.LocalDateTime;
 import java.util.List;
 import java.util.Optional;
 
 @Service
 public class FoodClassificationService {
     private static final Logger LOGGER = LoggerFactory.getLogger(FoodClassificationService.class);
+    private static final String LOG_FILE = "evaluation/OPEN_AI_RESPONSE_LOG.txt";
 
     private static final String API_KEY = System.getenv("API_KEY");
     private static final String OPEN_AI_API_URL = "https://api.openai.com/v1/chat/completions";
@@ -35,8 +35,6 @@ public class FoodClassificationService {
 
     private static final int INPUT_TOKEN_PRICE_PER_1K_IN_CENT = 1;
     private static final int OUTPUT_TOKEN_PRICE_PER_1K_IN_CENT = 3;
-
-    private static int counter = 0;
 
     private final OpenAiResponseToMealTranslation openAiResponseToMealTranslation;
 
@@ -50,7 +48,6 @@ public class FoodClassificationService {
         final OpenAiResponse openAiResponse = detectFoodViaOpenAiApi(base64Image);
         final long duration = System.currentTimeMillis() - startTime;
 
-        // TODO: Result in File schreiben
         logApiResult(imageName, openAiResponse, duration);
 
         return openAiResponseToMealTranslation
@@ -146,27 +143,49 @@ public class FoodClassificationService {
         return inputCost + outputCost;
     }
 
-    private void logApiResult(final String imageName, final OpenAiResponse response, final long processTimeMs) {
-        System.out.println("\n\n==============================================");
-        System.out.println(++counter + ". call to OpenAI API : " + imageName);
-        System.out.println("==============================================");
+    public String logApiResult(final String imageName, final OpenAiResponse response, final long processTimeMs) {
+        final var header = LocalDateTime.now() + ": Image " + imageName;
+        final var newLine = "\n";
+        final var divider = "=".repeat(header.length() + 2);
 
-        System.out.println("Process Time : " + processTimeMs + " ms");
-        System.out.println();
+        var logStr = newLine + newLine + divider + newLine + header + newLine + divider + newLine + newLine;
 
-        System.out.println("GPT-Model: " + response.getModel());
-        System.out.println("Detail Resolution: " + DETAIL_RESOLUTION);
-        System.out.println();
 
-        System.out.println("Total amount of tokens used: " + Optional.ofNullable(response.getUsage()).map(Usage::getTotalTokens).orElse(0));
-        System.out.println("Prompt Tokens: " + Optional.ofNullable(response.getUsage()).map(Usage::getPromptTokens).orElse(0));
-        System.out.println("Completion Tokens: " + Optional.ofNullable(response.getUsage()).map(Usage::getCompletionTokens).orElse(0));
-        System.out.printf("\nPrice Estimation (cent): %.3f %n", Optional.ofNullable(response.getUsage()).map(
-                this::calculatePriceEstimation).orElse(0.0));
-        System.out.println();
+        logStr += "Process Time : " + processTimeMs + " ms";
+        logStr += newLine;
+        logStr += newLine;
 
-        System.out.println("Prompt: " + INPUT_PROMPT);
-        System.out.println("Response: " + getContentOfFirstChoice(response));
+        logStr += "GPT-Model: " + response.getModel();
+        logStr += newLine;
+        logStr += "Detail Resolution: " + DETAIL_RESOLUTION;
+        logStr += newLine;
+        logStr += newLine;
+
+        logStr += "Total amount of tokens used: " + Optional.ofNullable(response.getUsage()).map(Usage::getTotalTokens).orElse(0);
+        logStr += newLine;
+        logStr += "Prompt Tokens: " + Optional.ofNullable(response.getUsage()).map(Usage::getPromptTokens).orElse(0);
+        logStr += newLine;
+        logStr += "Completion Tokens: " + Optional.ofNullable(response.getUsage()).map(Usage::getCompletionTokens).orElse(0);
+        logStr += newLine;
+        logStr += newLine;
+
+        logStr += String.format("Price Estimation (cent): %.3f %n", Optional.ofNullable(response.getUsage())
+                .map(this::calculatePriceEstimation)
+                .orElse(0.0));
+        logStr += newLine;
+
+        logStr += "Prompt: " + INPUT_PROMPT;
+        logStr += newLine;
+        logStr += "Response: " + getContentOfFirstChoice(response);
+        logStr += newLine;
+
+        try (BufferedWriter writer = new BufferedWriter(new FileWriter(LOG_FILE, true))) {
+            writer.write(logStr);
+        } catch (IOException e) {
+            LOGGER.error("Fehler beim loggen der OpenAiResponse: " + e.getMessage());
+        }
+
+        return logStr;
     }
 
     private <T> T logSuccessfull(final T entity) {
@@ -176,7 +195,7 @@ public class FoodClassificationService {
     }
 
     private Meal logFailureWithDefault() {
-        LOGGER.error("Error in Translation: Missing Information!");
+        //LOGGER.error("Error in Translation: Missing Information!");
 
         return Meal.builder().build();
     }

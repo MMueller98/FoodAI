@@ -1,0 +1,68 @@
+=====================================================
+2023-11-27T17:30:24.274979900: Image quinosalat.jpg
+=====================================================
+
+Process Time : 4162 ms
+
+GPT-Model: gpt-4-1106-vision-preview
+Detail Resolution: low
+
+Total amount of tokens used: 292
+Prompt Tokens: 156
+Completion Tokens: 136
+
+Price Estimation (cent): 0.564
+
+Prompt: Classify the food in the image and list all ingredients together with their proportion of the total amount of food as integer, so that the sum of all integers is 100. Return ONLY valid JSON int the format {"food_classifier":<string>,"ingredients":[{"name":<String>,"portion":<number>}]}
+Response: ```json
+{
+  "food_classifier": "salad",
+  "ingredients": [
+    {"name": "lettuce", "portion": 30},
+    {"name": "tomatoes", "portion": 20},
+    {"name": "cucumber", "portion": 15},
+    {"name": "cheese", "portion": 10},
+    {"name": "walnuts", "portion": 5},
+    {"name": "green onions", "portion": 5},
+    {"name": "pumpkin seeds", "portion": 5},
+    {"name": "green sauce", "portion": 10}
+  ]
+}
+```
+
+
+=====================================================
+2023-11-27T17:43:54.296858700: Image quinosalat.jpg
+=====================================================
+
+Process Time : 8262 ms
+
+GPT-Model: gpt-4-1106-vision-preview
+Detail Resolution: low
+
+Total amount of tokens used: 337
+Prompt Tokens: 156
+Completion Tokens: 181
+
+Price Estimation (cent): 0.699 
+
+
+Prompt: Classify the food in the image and list all ingredients together with their proportion of the total amount of food as integer, so that the sum of all integers is 100. Return ONLY valid JSON int the format {"food_classifier":<string>,"ingredients":[{"name":<String>,"portion":<number>}]}
+Response: ```json
+{
+  "food_classifier": "salad",
+  "ingredients": [
+    {"name": "lettuce", "portion": 30},
+    {"name": "tomatoes", "portion": 20},
+    {"name": "cucumbers", "portion": 20},
+    {"name": "cheese", "portion": 10},
+    {"name": "nuts", "portion": 5},
+    {"name": "spring onions", "portion": 5},
+    {"name": "dressing", "portion": 5},
+    {"name": "seeds", "portion": 5}
+  ]
+}
+```
+
+Please note that due to the varying nature of salad recipes, the actual ingredient proportions may differ, and identifying these proportions with precision from an image alone is not possible. The JSON provided is a best approximation based on visible ingredients.
+
